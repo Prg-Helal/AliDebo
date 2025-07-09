@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aly Dibo - Wholesale Marketplace Connecting Buyers & Suppliers</title>
+    <meta name="description"
+        content="Aly Dibo connects businesses with wholesale suppliers. Buy in bulk or sell your products to qualified buyers across industries.">
+    <link rel="alternate" hreflang="en" href="https://alydibo.com/en">
+    <link rel="alternate" hreflang="ar" href="https://alydibo.com/ar">
+    <link rel="canonical" href="https://alydibo.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preload"
+        href="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+        as="image">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="utility-buttons">
+                    <button id="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <div class="language-switcher">
+                        <button class="lang-btn active" data-lang="en">EN</button>
+                        <button class="lang-btn" data-lang="ar">AR</button>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <img src="logo.png" alt="Aly Dibo Logo" width="150" height="40">
+                    <h1 class="logo-text" data-i18n="logoText">علي ديبو</h1>
+                </a>
+
+                <div class="nav-links active" id="nav-links">
+                    <a href="#home" class="nav-link" data-i18n="home">Home</a>
+                    <a href="#why" class="nav-link" data-i18n="why">Why Aly Dibo?</a>
+                    <a href="#categories" class="nav-link" data-i18n="categories">Categories</a>
+                    <a href="#stories" class="nav-link" data-i18n="stories">Success Stories</a>
+                    <a href="#products" class="nav-link" data-i18n="products">Products</a>
+                    <a href="#sell" class="nav-link" data-i18n="sell">Sell With Us</a>
+                </div>
+                <div class="auth-buttons">
+                    <button class="btn btn-outline" data-i18n="login">Login</button>
+                    <button class="btn btn-primary" data-i18n="register">Register</button>
+                </div>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+                <div class="mobile-sidebar" id="mobileSidebar">
+                    <button class="close-sidebar" id="closeSidebar" aria-label="Close Sidebar">&times;</button>
+
+                    <div class="sidebar-logo">
+                        <img src="logo.png" alt="Logo" />
+                        <h1 class="logo-text" data-i18n="logoText">علي ديبو</h1>
+                    </div>
+
+                    <div class="sidebar-links">
+                        <a href="#home" class="nav-link" data-i18n="home">Home</a>
+                        <a href="#why" class="nav-link" data-i18n="why">Why Aly Dibo?</a>
+                        <a href="#categories" class="nav-link" data-i18n="categories">Categories</a>
+                        <a href="#stories" class="nav-link" data-i18n="stories">Success Stories</a>
+                        <a href="#products" class="nav-link" data-i18n="products">Products</a>
+                        <a href="#sell" class="nav-link" data-i18n="sell">Sell With Us</a>
+                    </div>
+
+                    <div class="sidebar-auth">
+                        <button class="btn btn-outline" data-i18n="login">Login</button>
+                        <button class="btn btn-primary" data-i18n="register">Register</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Floating Cart -->
+    <div class="floating-cart" id="floating-cart">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count">0</span>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section section-padding" id="home">
+        <div class="container">
+            <div class="hero-grid">
+                <!-- Text Area -->
+                <div class="hero-text">
+                    <h1 data-i18n="heroTitle">
+                        فعّل تجارتك. وسّع انتشارك. <span class="highlight" data-i18n="heroTitlSspan">وانطلق بلا
+                            حدود.</span>
+
+                    </h1>
+                    <p data-i18n="hero_subtitle">
+                        Ali Dibo is the gateway between trusted companies and real customers.
+                        Discover authentic products and grow your business with confidence.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#categoriesSection" class="btn btn-primary" data-i18n="hero_cta_shop">Start
+                            Shopping</a>
+                        <a href="#sellSection" class="btn btn-outline" data-i18n="hero_cta_sell">Start Selling</a>
+                    </div>
+                </div>
+
+                <!-- Image Grid -->
+                <div class="hero-images">
+                    <div class="hero-img-card hero-img-1">
+                        <img src="assets/images/E-Commerce platforms.jpeg" alt="Buyer Image" loading="lazy" />
+                    </div>
+                    <div class="hero-img-card hero-img-2">
+                        <img src="assets/images/One month of social media marketing management for your small business.jpeg"
+                            alt="Global Reach" loading="lazy" />
+                    </div>
+                    <div class="hero-img-card hero-img-3">
+                        <img src="assets/images/Servicio de entrega Caja de paquetes de envío de camiones de entrega con alfileres en el mapa _ PSD Premium.jpeg"
+                            alt="Company Collaboration" loading="lazy" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Why Aly Dibo Section -->
+    <section class="why-section section-padding" id="why">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="whyTitle">Why Choose Aly Dibo?</h2>
+                <p class="section-subtitle" data-i18n="whySubtitle">The trusted platform connecting businesses with
+                    quality suppliers</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 data-i18n="why1Title">Verified Suppliers</h3>
+                    <p data-i18n="why1Text">All suppliers undergo strict verification to ensure product quality and
+                        business legitimacy.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3 data-i18n="why2Title">Competitive Pricing</h3>
+                    <p data-i18n="why2Text">Get the best wholesale prices by connecting directly with manufacturers and
+                        distributors.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 data-i18n="why3Title">Global Reach</h3>
+                    <p data-i18n="why3Text">Access suppliers and buyers from multiple countries, all in one convenient
+                        platform.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 data-i18n="why4Title">Dedicated Support</h3>
+                    <p data-i18n="why4Text">Our team is available to assist with transactions, disputes, and any
+                        platform questions.</p>
+                </div>
+            </div>
+            <div class="why-mission">
+                <div class="mission-image">
+                    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80"
+                        alt="Team discussing business" loading="lazy">
+                </div>
+                <div class="mission-content">
+                    <h3 data-i18n="missionTitle">Our Mission</h3>
+                    <p data-i18n="missionText">At Aly Dibo, we're revolutionizing wholesale trade by removing barriers
+                        between buyers and sellers. Our platform provides the tools, security, and network needed to
+                        grow your business efficiently in today's competitive market. We believe in transparent, fair
+                        trade that benefits all parties.</p>
+                    <button class="btn btn-primary" data-i18n="joinNow">Join Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section section-padding" id="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="categoriesTitle">Product Categories</h2>
+                <p class="section-subtitle" data-i18n="categoriesSubtitle">Browse our extensive range of wholesale
+                    products</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                            alt="Electronics" loading="lazy">
+                        <span class="category-badge" data-i18n="popular">Popular</span>
+                    </div>
+                    <h3 data-i18n="category1">Electronics</h3>
+                    <p data-i18n="category1Desc">From components to finished devices</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                            alt="Textiles" loading="lazy">
+                    </div>
+                    <h3 data-i18n="category2">Textiles & Apparel</h3>
+                    <p data-i18n="category2Desc">Fabrics, clothing and accessories</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1453&q=80"
+                            alt="Food" loading="lazy">
+                        <span class="category-badge" data-i18n="new">New</span>
+                    </div>
+                    <h3 data-i18n="category3">Food & Beverage</h3>
+                    <p data-i18n="category3Desc">Wholesale food products</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                            alt="Furniture" loading="lazy">
+                    </div>
+                    <h3 data-i18n="category4">Furniture</h3>
+                    <p data-i18n="category4Desc">Home and office solutions</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1587&q=80"
+                            alt="Beauty" loading="lazy">
+                    </div>
+                    <h3 data-i18n="category5">Beauty & Personal Care</h3>
+                    <p data-i18n="category5Desc">Cosmetics and hygiene products</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1581093450021-4a7360e9a9e5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                            alt="Industrial" loading="lazy">
+                        <span class="category-badge" data-i18n="trending">Trending</span>
+                    </div>
+                    <h3 data-i18n="category6">Industrial Supplies</h3>
+                    <p data-i18n="category6Desc">Tools, equipment and materials</p>
+                </div>
+            </div>
+            <div class="section-footer">
+                <button class="btn btn-outline" data-i18n="exploreAll">Explore All Categories</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories Section -->
+    <section class="stories-section section-padding" id="stories">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="storiesTitle">Success Stories</h2>
+                <p class="section-subtitle" data-i18n="storiesSubtitle">Businesses growing with Aly Dibo</p>
+            </div>
+            <div class="story-cards">
+                <div class="story-card">
+                    <div class="story-content">
+                        <div class="company-logo">
+                            <img src="https://via.placeholder.com/150x50?text=TechMart" alt="TechMart Logo"
+                                loading="lazy">
+                        </div>
+                        <h3>TechMart Electronics</h3>
+                        <p class="story-quote" data-i18n="story1">"Aly Dibo helped us expand our supplier network across
+                            three new countries. Our procurement costs decreased by 18% while improving product
+                            quality."</p>
+                        <button class="btn btn-text" data-i18n="viewProducts">View their products <i
+                                class="fas fa-arrow-right"></i></button>
+                    </div>
+                    <div class="story-image">
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                            alt="TechMart warehouse" loading="lazy">
+                    </div>
+                </div>
+                <div class="story-card reverse">
+                    <div class="story-content">
+                        <div class="company-logo">
+                            <img src="https://via.placeholder.com/150x50?text=FabriTex" alt="FabriTex Logo"
+                                loading="lazy">
+                        </div>
+                        <h3>FabriTex International</h3>
+                        <p class="story-quote" data-i18n="story2">"Since joining Aly Dibo, we've secured contracts with
+                            12 new wholesale buyers. The platform's escrow service gives us payment security we didn't
+                            have before."</p>
+                        <button class="btn btn-text" data-i18n="viewProducts">View their products <i
+                                class="fas fa-arrow-right"></i></button>
+                    </div>
+                    <div class="story-image">
+                        <img src="https://images.unsplash.com/photo-1494412651409-8963ce7935a7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                            alt="FabriTex factory" loading="lazy">
+                    </div>
+                </div>
+                <div class="story-card vertical">
+                    <div class="story-image">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
+                            alt="Gourmet Foods store" loading="lazy">
+                    </div>
+                    <div class="story-content">
+                        <div class="company-logo">
+                            <img src="https://via.placeholder.com/150x50?text=Gourmet+Foods" alt="Gourmet Foods Logo"
+                                loading="lazy">
+                        </div>
+                        <h3>Gourmet Foods</h3>
+                        <p class="story-quote" data-i18n="story3">"Finding reliable international suppliers for
+                            specialty ingredients was challenging until we discovered Aly Dibo. Now we source directly
+                            from producers with full traceability."</p>
+                        <button class="btn btn-text" data-i18n="viewProducts">View their products <i
+                                class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="story-cta">
+                    <div class="cta-content">
+                        <h3 data-i18n="yourStory">Your story could be here</h3>
+                        <p data-i18n="joinPlatform">Join our platform and start growing your wholesale business today
+                        </p>
+                        <button class="btn btn-primary" data-i18n="registerCompany">Register Your Company</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="products-section section-padding" id="products">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="productsTitle">Featured Products</h2>
+                <p class="section-subtitle" data-i18n="productsSubtitle">Quality wholesale products available now</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-badge">⭐ <span data-i18n="new">New</span></div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1364&q=80"
+                            alt="Smartwatch" loading="lazy">
+                    </div>
+                    <div class="product-content">
+                        <h3 data-i18n="product1">Smartwatch X200 Pro</h3>
+                        <p class="product-seller" data-i18n="by">by</p>
+                        <p class="product-price" data-i18n="contactPrice">Contact for price</p>
+                        <div class="product-actions">
+                            <button class="btn btn-icon" aria-label="Add to cart"><i
+                                    class="fas fa-cart-plus"></i></button>
+                            <button class="btn btn-text" data-i18n="view">View</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-badge">🔥 <span data-i18n="trending">Trending</span></div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1559&q=80"
+                            alt="T-shirts" loading="lazy">
+                    </div>
+                    <div class="product-content">
+                        <h3 data-i18n="product2">Organic Cotton T-shirts</h3>
+                        <p class="product-seller" data-i18n="by">by</p>
+                        <p class="product-price">$3.20 <span data-i18n="unit">/unit</span></p>
+                        <div class="product-actions">
+                            <button class="btn btn-icon" aria-label="Add to cart"><i
+                                    class="fas fa-cart-plus"></i></button>
+                            <button class="btn btn-text" data-i18n="view">View</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
+                            alt="Coffee" loading="lazy">
+                    </div>
+                    <div class="product-content">
+                        <h3 data-i18n="product3">Premium Arabica Coffee</h3>
+                        <p class="product-seller" data-i18n="by">by</p>
+                        <p class="product-price">$8.75 <span data-i18n="unit">/unit</span></p>
+                        <div class="product-actions">
+                            <button class="btn btn-icon" aria-label="Add to cart"><i
+                                    class="fas fa-cart-plus"></i></button>
+                            <button class="btn btn-text" data-i18n="view">View</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1434&q=80"
+                            alt="Office chair" loading="lazy">
+                    </div>
+                    <div class="product-content">
+                        <h3 data-i18n="product4">Ergonomic Office Chair</h3>
+                        <p class="product-seller" data-i18n="by">by</p>
+                        <p class="product-price" data-i18n="contactPrice">Contact for price</p>
+                        <div class="product-actions">
+                            <button class="btn btn-icon" aria-label="Add to cart"><i
+                                    class="fas fa-cart-plus"></i></button>
+                            <button class="btn btn-text" data-i18n="view">View</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-badge">🔥 <span data-i18n="trending">Trending</span></div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
+                            alt="Skincare" loading="lazy">
+                    </div>
+                    <div class="product-content">
+                        <h3 data-i18n="product5">Natural Skincare Set</h3>
+                        <p class="product-seller" data-i18n="by">by</p>
+                        <p class="product-price">$12.90 <span data-i18n="unit">/unit</span></p>
+                        <div class="product-actions">
+                            <button class="btn btn-icon" aria-label="Add to cart"><i
+                                    class="fas fa-cart-plus"></i></button>
+                            <button class="btn btn-text" data-i18n="view">View</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                            alt="Tools" loading="lazy">
+                    </div>
+                    <div class="product-content">
+                        <h3 data-i18n="product6">Professional Tool Kit</h3>
+                        <p class="product-seller" data-i18n="by">by</p>
+                        <p class="product-price">$45.00 <span data-i18n="unit">/unit</span></p>
+                        <div class="product-actions">
+                            <button class="btn btn-icon" aria-label="Add to cart"><i
+                                    class="fas fa-cart-plus"></i></button>
+                            <button class="btn btn-text" data-i18n="view">View</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-footer">
+                <button class="btn btn-outline" data-i18n="viewAll">View All Products</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sell With Us Section -->
+    <section class="sell-section section-padding" id="sell">
+        <div class="container">
+            <div class="sell-content">
+                <h2 data-i18n="sellTitle">Start Selling on Aly Dibo Today</h2>
+                <p data-i18n="sellText">Join thousands of suppliers reaching new customers and growing their wholesale
+                    business. Our platform provides the tools, visibility, and security you need to succeed.</p>
+                <div class="sell-features">
+                    <div class="feature-item">
+                        <i class="fas fa-chart-line"></i>
+                        <span data-i18n="sellFeature1">Grow your sales</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-users"></i>
+                        <span data-i18n="sellFeature2">Reach new buyers</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-lock"></i>
+                        <span data-i18n="sellFeature3">Secure transactions</span>
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-large" data-i18n="registerCompany">Register Your Company</button>
+            </div>
+            <div class="sell-image">
+                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                    alt="Business growth illustration" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section section-padding">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2 data-i18n="newsletterTitle">Stay Updated</h2>
+                <p data-i18n="newsletterText">Subscribe to our newsletter for the latest products, deals, and wholesale
+                    insights.</p>
+                <form class="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" placeholder="Your email address" required aria-label="Email address">
+                        <button type="submit" class="btn btn-primary" data-i18n="subscribe">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+            <div class="newsletter-image">
+                <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                    alt="Email newsletter illustration" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <img src="https://via.placeholder.com/150x40?text=Aly+Dibo+Logo" alt="Aly Dibo Logo"
+                        class="footer-logo">
+                    <p data-i18n="footerAbout">Aly Dibo connects wholesale buyers with trusted suppliers across multiple
+                        industries and regions.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3 data-i18n="footerLinks1">Quick Links</h3>
+                    <ul>
+                        <li><a href="#home" data-i18n="home">Home</a></li>
+                        <li><a href="#why" data-i18n="why">Why Aly Dibo?</a></li>
+                        <li><a href="#categories" data-i18n="categories">Categories</a></li>
+                        <li><a href="#products" data-i18n="products">Products</a></li>
+                        <li><a href="#sell" data-i18n="sell">Sell With Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 data-i18n="footerLinks2">Company</h3>
+                    <ul>
+                        <li><a href="#" data-i18n="about">About Us</a></li>
+                        <li><a href="#" data-i18n="careers">Careers</a></li>
+                        <li><a href="#" data-i18n="blog">Blog</a></li>
+                        <li><a href="#" data-i18n="contact">Contact</a></li>
+                        <li><a href="#" data-i18n="faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 data-i18n="footerContact">Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footerAddress">123 Business District,
+                                Dubai, UAE</span></li>
+                        <li><i class="fas fa-phone"></i> <span>+971 4 123 4567</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>info@alydibo.com</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-utility">
+                    <div class="language-switcher">
+                        <button class="lang-btn active" data-lang="en">EN</button>
+                        <button class="lang-btn" data-lang="ar">AR</button>
+                    </div>
+                    <button id="footer-theme-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; <span id="year"></span> Aly Dibo. <span data-i18n="rights">All rights reserved.</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
