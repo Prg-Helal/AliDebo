@@ -489,7 +489,7 @@ button {
     visibility: visible;
 }
 
-.mobile-cta-button{
+.mobile-cta-button {
     display: none;
 }
 
@@ -1448,6 +1448,31 @@ html[dir="rtl"] .footer-col ul li a:hover {
     .newsletter-image {
         width: 100%;
     }
+
+    .floating-cart{
+        display: none;
+    }
+
+    .mobile-cta-button {
+        display: flex;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 10000;
+        background-color: var(--primary-color);
+        color: white;
+        padding: 12px 20px;
+        border-radius: 50px;
+        font-size: 14px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        text-decoration: none;
+        transition: background 0.3s ease;
+        font-weight: 500;
+    }
+
+    .mobile-cta-button:hover {
+        background-color: #d03f0d;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1500,25 +1525,6 @@ html[dir="rtl"] .footer-col ul li a:hover {
         font-size: 1.2rem;
     }
 
-    .mobile-cta-button {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 10000;
-        background-color: var(--primary-color);
-        color: white;
-        padding: 12px 20px;
-        border-radius: 50px;
-        font-size: 14px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        text-decoration: none;
-        transition: background 0.3s ease;
-        font-weight: 500;
-    }
-
-    .mobile-cta-button:hover {
-        background-color: #d03f0d;
-    }
 }
 
 @media (max-width: 480px) {
