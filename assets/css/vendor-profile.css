@@ -1,0 +1,601 @@
+/* Vendor Profile Specific Styles */
+.vendor-hero {
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.vendor-cover {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.vendor-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.vendor-cover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%);
+}
+
+.vendor-header {
+    display: flex;
+    align-items: flex-end;
+    gap: 30px;
+    margin-top: -80px;
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+}
+
+.vendor-logo {
+    width: 160px;
+    height: 160px;
+    border-radius: 12px;
+    background: var(--bg-color);
+    padding: 10px;
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vendor-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.vendor-info {
+    flex: 1;
+}
+
+.vendor-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.vendor-meta {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.vendor-meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+}
+
+.vendor-verified {
+    color: var(--success-color);
+}
+
+.vendor-location, .vendor-joined {
+    color: var(--text-light);
+}
+
+.vendor-actions {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.vendor-main {
+    padding: 40px 0;
+}
+
+.vendor-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+}
+
+.vendor-about {
+    background: var(--bg-light);
+    padding: 30px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+}
+
+.vendor-about h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.vendor-about h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--primary-color);
+}
+
+.vendor-description p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.vendor-features {
+    margin: 25px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+}
+
+.feature-item i {
+    color: var(--primary-color);
+}
+
+.vendor-contact {
+    margin-top: 30px;
+}
+
+.vendor-contact h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+}
+
+.contact-item i {
+    width: 20px;
+    color: var(--primary-color);
+}
+
+.contact-item a {
+    transition: color 0.3s;
+}
+
+.contact-item a:hover {
+    color: var(--primary-color);
+}
+
+.vendor-certifications {
+    margin-top: 30px;
+}
+
+.vendor-certifications h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+.certification-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    background: var(--bg-color);
+    padding: 10px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-color);
+    min-width: 80px;
+}
+
+.badge img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.badge span {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Vendor Products */
+.vendor-products .section-header {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.product-filters {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-group label {
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.filter-select {
+    padding: 8px 15px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-color);
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: inherit;
+    min-width: 150px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.product-card {
+    background: var(--bg-light);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.product-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: var(--primary-color);
+    color: white;
+    padding: 4px 10px;
+    border-radius: var(--radius-sm);
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.product-image {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-content {
+    padding: 20px;
+}
+
+.product-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.product-rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.product-rating .stars {
+    color: var(--warning-color);
+    font-size: 0.9rem;
+}
+
+.rating-count {
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+.product-price {
+    margin-bottom: 15px;
+}
+
+.current-price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.moq {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-left: 8px;
+}
+
+.product-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Testimonials */
+.vendor-testimonials {
+    margin-top: 80px;
+    padding-top: 60px;
+    border-top: 1px solid var(--border-color);
+}
+
+.vendor-testimonials .section-header {
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.rating-summary {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.overall-rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--bg-light);
+    padding: 20px;
+    border-radius: var(--radius-md);
+    min-width: 150px;
+}
+
+.rating-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.rating-summary .stars {
+    font-size: 1.2rem;
+    color: var(--warning-color);
+    margin: 5px 0;
+}
+
+.rating-count {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.rating-bars {
+    flex: 1;
+    min-width: 250px;
+}
+
+.rating-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.rating-bar span:first-child {
+    width: 30px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.rating-bar span:last-child {
+    width: 40px;
+    text-align: right;
+    font-size: 0.9rem;
+}
+
+.bar-container {
+    flex: 1;
+    height: 8px;
+    background: var(--border-color);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.bar {
+    height: 100%;
+    background: var(--warning-color);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.testimonial-card {
+    background: var(--bg-light);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    border: 1px solid var(--border-color);
+}
+
+.testimonial-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.reviewer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.reviewer img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.reviewer-info h4 {
+    font-size: 1rem;
+    margin-bottom: 3px;
+}
+
+.reviewer-info .stars {
+    font-size: 0.8rem;
+    color: var(--warning-color);
+}
+
+.review-date {
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+.testimonial-content h4 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.testimonial-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-light);
+}
+
+.review-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-size: 0.8rem;
+    color: var(--text-light);
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.verified-buyer {
+    color: var(--success-color);
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.testimonial-cta {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .vendor-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .vendor-header {
+        flex-wrap: wrap;
+    }
+    
+    .vendor-actions {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .vendor-cover {
+        height: 200px;
+    }
+    
+    .vendor-header {
+        margin-top: -60px;
+    }
+    
+    .vendor-logo {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .vendor-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .rating-summary {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .vendor-header {
+        gap: 15px;
+    }
+    
+    .vendor-info h1 {
+        font-size: 1.8rem;
+    }
+    
+    .vendor-meta {
+        gap: 10px;
+    }
+    
+    .vendor-actions {
+        flex-direction: column;
+    }
+    
+    .product-filters {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .testimonial-cta {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | Ali Dibo - Wholesale Marketplace</title>
+    <meta name="description" content="Detailed product information on Ali Dibo marketplace">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/product-details.css">
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Top Bar (Same as index.html) -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="utility-buttons">
+                    <button id="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <div class="divider"></div>
+                    <div class="language-switcher">
+                        <i class="fas fa-globe"></i>
+                        <button class="lang-btn active" data-lang="en">EN</button>
+                        <button class="lang-btn" data-lang="ar">AR</button>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header (Same as index.html) -->
+    <header class="main-header" data-aos="fade-down" data-aos-duration="600">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo" data-aos="fade-right" data-aos-delay="100">
+                    <img src="assets/images/logo.png" alt="Aly Dibo Logo" width="150" height="40" />
+                    <h1 class="logo-text" data-i18n="logoText">علي ديبو</h1>
+                </a>
+                <div class="nav-links" id="nav-links" data-aos="fade-down" data-aos-delay="200">
+                    <a href="index.html" class="nav-link" data-i18n="home">Home</a>
+                    <a href="index.html#why" class="nav-link" data-i18n="why">Why Aly Dibo?</a>
+                    <a href="index.html#categories" class="nav-link" data-i18n="categories">Categories</a>
+                    <a href="index.html#stories" class="nav-link" data-i18n="stories">Success Stories</a>
+                    <a href="index.html#products" class="nav-link" data-i18n="products">Products</a>
+                    <a href="index.html#sell" class="nav-link" data-i18n="sell">Sell With Us</a>
+                </div>
+                <div class="auth-buttons" data-aos="fade-left" data-aos-delay="300">
+                    <button class="btn btn-outline" data-i18n="login">Login</button>
+                    <button class="btn btn-primary" data-i18n="register">Register</button>
+                </div>
+                <button class="hamburger" id="hamburger" aria-label="Menu" data-aos="fade-left" data-aos-delay="400">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="sidebar-overlay" id="sidebarOverlay"></div>
+                <div class="mobile-sidebar" id="mobileSidebar">
+                    <button class="close-sidebar" id="closeSidebar" aria-label="Close Sidebar">&times;</button>
+                    <div class="sidebar-logo">
+                        <img src="assets/images/logo.png" alt="Logo" />
+                        <h1 class="logo-text" data-i18n="logoText">علي ديبو</h1>
+                    </div>
+                    <div class="sidebar-links">
+                        <a href="index.html" class="nav-link" data-i18n="home">Home</a>
+                        <a href="index.html#why" class="nav-link" data-i18n="why">Why Aly Dibo?</a>
+                        <a href="index.html#categories" class="nav-link" data-i18n="categories">Categories</a>
+                        <a href="index.html#stories" class="nav-link" data-i18n="stories">Success Stories</a>
+                        <a href="index.html#products" class="nav-link" data-i18n="products">Products</a>
+                        <a href="index.html#sell" class="nav-link" data-i18n="sell">Sell With Us</a>
+                    </div>
+                    <div class="sidebar-auth">
+                        <button class="btn btn-outline" data-i18n="login">Login</button>
+                        <button class="btn btn-primary" data-i18n="register">Register</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Floating Cart -->
+    <div class="floating-cart" id="floating-cart">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count">0</span>
+    </div>
+
+    <!-- Product Details Section -->
+    <section class="product-details-section section-padding">
+        <div class="container">
+            <!-- Breadcrumb Navigation -->
+            <nav class="breadcrumb" data-aos="fade-right">
+                <ol>
+                    <li><a href="index.html" data-i18n="home">Home</a></li>
+                    <li><a href="index.html#products" data-i18n="products">Products</a></li>
+                    <li class="active" data-i18n="productDetails">Product Details</li>
+                </ol>
+            </nav>
+
+            <!-- Product Main Content -->
+            <div class="product-main">
+                <!-- Product Gallery -->
+                <div class="product-gallery" data-aos="fade-right">
+                    <div class="main-image">
+                        <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=1364&q=80" 
+                             alt="Smartwatch X200 Pro" id="mainProductImage" loading="lazy">
+                    </div>
+                    <div class="thumbnail-images">
+                        <div class="thumbnail active" data-image="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=1364&q=80">
+                            <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=200&q=80" alt="Smartwatch thumbnail 1">
+                        </div>
+                        <div class="thumbnail" data-image="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=1364&q=80">
+                            <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=200&q=80" alt="Smartwatch thumbnail 2">
+                        </div>
+                        <div class="thumbnail" data-image="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=1364&q=80">
+                            <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=200&q=80" alt="Smartwatch thumbnail 3">
+                        </div>
+                        <div class="thumbnail" data-image="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1364&q=80">
+                            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=200&q=80" alt="Smartwatch thumbnail 4">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-info" data-aos="fade-left">
+                    <div class="product-header">
+                        <span class="product-badge" data-i18n="trending">Trending</span>
+                        <h1 data-i18n="product1">Smartwatch X200 Pro</h1>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="review-count">(42 <span data-i18n="reviews">reviews</span>)</span>
+                        </div>
+                    </div>
+
+                    <div class="product-pricing">
+                        <div class="current-price">$129.99</div>
+                        <div class="original-price">$159.99</div>
+                        <div class="discount-badge">19% <span data-i18n="off">OFF</span></div>
+                    </div>
+
+                    <div class="product-description">
+                        <p data-i18n="product1Desc">The Smartwatch X200 Pro combines cutting-edge technology with sleek design. Track your fitness, receive notifications, and enjoy long battery life with this premium wearable device.</p>
+                        <ul class="features-list">
+                            <li><i class="fas fa-check"></i> <span data-i18n="feature1">Heart rate & blood oxygen monitoring</span></li>
+                            <li><i class="fas fa-check"></i> <span data-i18n="feature2">Water resistant up to 50 meters</span></li>
+                            <li><i class="fas fa-check"></i> <span data-i18n="feature3">14-day battery life</span></li>
+                            <li><i class="fas fa-check"></i> <span data-i18n="feature4">Built-in GPS and NFC payments</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="product-actions">
+                        <div class="quantity-selector">
+                            <button class="quantity-btn minus"><i class="fas fa-minus"></i></button>
+                            <input type="number" value="1" min="1" max="10" class="quantity-input">
+                            <button class="quantity-btn plus"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <button class="btn btn-primary btn-add-to-cart" data-i18n="addToCart">Add to Cart</button>
+                        <button class="btn btn-outline btn-wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+
+                    <div class="product-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-tag"></i>
+                            <span data-i18n="category">Category:</span> <a href="#" data-i18n="category1">Electronics</a>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-box"></i>
+                            <span data-i18n="stock">Stock:</span> <span class="in-stock" data-i18n="inStock">In Stock (48 units)</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-barcode"></i>
+                            <span data-i18n="sku">SKU:</span> SW-X200-PRO-BLK
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Tabs -->
+            <div class="product-tabs" data-aos="fade-up">
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="description" data-i18n="description">Description</button>
+                    <button class="tab-btn" data-tab="specifications" data-i18n="specifications">Specifications</button>
+                    <button class="tab-btn" data-tab="reviews" data-i18n="reviews">Reviews</button>
+                    <button class="tab-btn" data-tab="shipping" data-i18n="shipping">Shipping & Returns</button>
+                </div>
+                <div class="tabs-content">
+                    <div class="tab-pane active" id="description">
+                        <h3 data-i18n="aboutProduct">About this product</h3>
+                        <p data-i18n="product1FullDesc">The Smartwatch X200 Pro is designed for those who demand both style and functionality. With its premium aluminum casing and AMOLED display, it looks as good as it performs. Stay connected with call and message notifications, track over 20 different sports activities, and monitor your health metrics with precision. The watch is compatible with both iOS and Android devices, ensuring seamless integration with your smartphone.</p>
+                        
+                        <h3 data-i18n="keyFeatures">Key Features</h3>
+                        <ul>
+                            <li data-i18n="keyFeature1">1.78" AMOLED touchscreen with always-on display option</li>
+                            <li data-i18n="keyFeature2">Advanced health monitoring (heart rate, SpO2, stress, sleep)</li>
+                            <li data-i18n="keyFeature3">Built-in GPS for accurate outdoor activity tracking</li>
+                            <li data-i18n="keyFeature4">NFC for contactless payments (supports major payment systems)</li>
+                            <li data-i18n="keyFeature5">5ATM water resistance for swimming and water sports</li>
+                            <li data-i18n="keyFeature6">Customizable watch faces and straps available</li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" id="specifications">
+                        <h3 data-i18n="technicalDetails">Technical Details</h3>
+                        <table>
+                            <tr>
+                                <th data-i18n="brand">Brand</th>
+                                <td>TechPro</td>
+                            </tr>
+                            <tr>
+                                <th data-i18n="model">Model</th>
+                                <td>X200 Pro</td>
+                            </tr>
+                            <tr>
+                                <th data-i18n="display">Display</th>
+                                <td data-i18n="displayDesc">1.78" AMOLED, 448×368 pixels</td>
+                            </tr>
+                            <tr>
+                                <th data-i18n="battery">Battery Life</th>
+                                <td data-i18n="batteryLife">Up to 14 days (typical use)</td>
+                            </tr>
+                            <tr>
+                                <th data-i18n="waterResistance">Water Resistance</th>
+                                <td data-i18n="waterResistanceLevel">5ATM (50 meters)</td>
+                            </tr>
+                            <tr>
+                                <th data-i18n="connectivity">Connectivity</th>
+                                <td data-i18n="connectivityDetails">Bluetooth 5.2, GPS, NFC</td>
+                            </tr>
+                            <tr>
+                                <th data-i18n="compatibility">Compatibility</th>
+                                <td data-i18n="compatibilityDetails">iOS 12+/Android 8+</td>
+                            </tr>
+                            <tr>
+                                <th data-i18n="dimensions">Dimensions</th>
+                                <td data-i18n="dimensionsDetails">46.5×46.5×11.4mm, 45g</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="tab-pane" id="reviews">
+                        <h3 data-i18n="customerReviews">Customer Reviews</h3>
+                        <div class="review-summary">
+                            <div class="overall-rating">
+                                <div class="rating-value">4.7</div>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <div class="total-reviews" data-i18n="totalReviews">Based on 42 reviews</div>
+                            </div>
+                            <div class="rating-bars">
+                                <div class="rating-bar">
+                                    <span data-i18n="fiveStars">5 stars</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="width: 75%;"></div>
+                                    </div>
+                                    <span>75%</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span data-i18n="fourStars">4 stars</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="width: 15%;"></div>
+                                    </div>
+                                    <span>15%</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span data-i18n="threeStars">3 stars</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="width: 5%;"></div>
+                                    </div>
+                                    <span>5%</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span data-i18n="twoStars">2 stars</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="width: 3%;"></div>
+                                    </div>
+                                    <span>3%</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span data-i18n="oneStar">1 star</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="width: 2%;"></div>
+                                    </div>
+                                    <span>2%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews-list">
+                            <div class="review">
+                                <div class="review-header">
+                                    <div class="reviewer">
+                                        <div class="reviewer-name">Ahmed M.</div>
+                                        <div class="review-date">March 15, 2023</div>
+                                    </div>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="review-title" data-i18n="review1Title">Excellent smartwatch for the price</div>
+                                <div class="review-content" data-i18n="review1Content">I've been using this watch for 3 months now and it's been fantastic. The battery life is as advertised, the display is crisp, and the fitness tracking is accurate. Highly recommend!</div>
+                            </div>
+                            <div class="review">
+                                <div class="review-header">
+                                    <div class="reviewer">
+                                        <div class="reviewer-name">Sarah K.</div>
+                                        <div class="review-date">February 28, 2023</div>
+                                    </div>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                                <div class="review-title" data-i18n="review2Title">Great value with minor issues</div>
+                                <div class="review-content" data-i18n="review2Content">Overall a great watch, especially for the price. The only issue I've had is that the step counter seems slightly off compared to my phone. The sleep tracking works well though.</div>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline btn-load-more" data-i18n="loadMoreReviews">Load More Reviews</button>
+                    </div>
+                    <div class="tab-pane" id="shipping">
+                        <h3 data-i18n="shippingInfo">Shipping Information</h3>
+                        <div class="shipping-options">
+                            <div class="shipping-option">
+                                <i class="fas fa-shipping-fast"></i>
+                                <div class="option-details">
+                                    <div class="option-title" data-i18n="standardShipping">Standard Shipping</div>
+                                    <div class="option-desc" data-i18n="standardShippingDesc">3-5 business days - $5.99</div>
+                                </div>
+                            </div>
+                            <div class="shipping-option">
+                                <i class="fas fa-rocket"></i>
+                                <div class="option-details">
+                                    <div class="option-title" data-i18n="expressShipping">Express Shipping</div>
+                                    <div class="option-desc" data-i18n="expressShippingDesc">1-2 business days - $12.99</div>
+                                </div>
+                            </div>
+                            <div class="shipping-option">
+                                <i class="fas fa-store"></i>
+                                <div class="option-details">
+                                    <div class="option-title" data-i18n="freePickup">Free Store Pickup</div>
+                                    <div class="option-desc" data-i18n="freePickupDesc">Available in select locations</div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 data-i18n="returnPolicy">Return Policy</h3>
+                        <p data-i18n="returnPolicyDesc">We offer a 30-day return policy for most items. Products must be in original condition with all packaging and accessories included. Refunds will be issued to the original payment method. Some exclusions may apply.</p>
+                        <ul>
+                            <li data-i18n="returnPolicy1">30-day return window from delivery date</li>
+                            <li data-i18n="returnPolicy2">Free returns for defective items</li>
+                            <li data-i18n="returnPolicy3">Customer pays return shipping for non-defective items</li>
+                            <li data-i18n="returnPolicy4">Refund processed within 3-5 business days after receipt</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seller Information -->
+            <div class="seller-info" data-aos="fade-up">
+                <h2 data-i18n="sellerInfo">Seller Information</h2>
+                <div class="seller-card">
+                    <div class="seller-header">
+                        <img src="https://via.placeholder.com/80?text=TechPro" alt="TechPro Logo" class="seller-logo">
+                        <div class="seller-details">
+                            <h3>TechPro Electronics</h3>
+                            <div class="seller-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="rating-value">4.6</span>
+                                <span class="review-count">(128 <span data-i18n="reviews">reviews</span>)</span>
+                            </div>
+                            <div class="seller-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span data-i18n="basedIn">Based in Dubai, UAE</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="seller-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">98%</div>
+                            <div class="stat-label" data-i18n="positiveFeedback">Positive Feedback</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">2.4K</div>
+                            <div class="stat-label" data-i18n="products">Products</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">5</div>
+                            <div class="stat-label" data-i18n="years">Years</div>
+                        </div>
+                    </div>
+                    <div class="seller-actions">
+                        <button class="btn btn-outline" data-i18n="viewStore">View Store</button>
+                        <button class="btn btn-primary" data-i18n="contactSeller">Contact Seller</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Products -->
+            <div class="related-products" data-aos="fade-up">
+                <div class="section-header">
+                    <h2 data-i18n="relatedProducts">You May Also Like</h2>
+                    <p class="section-subtitle" data-i18n="relatedProductsSubtitle">Similar products you might be interested in</p>
+                </div>
+                <div class="products-grid">
+                    <!-- Product Card 1 -->
+                    <div class="product-card">
+                        <div class="product-badge">⭐ <span data-i18n="new">New</span></div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=1364&q=80" 
+                                 alt="Smartwatch X100" loading="lazy">
+                        </div>
+                        <div class="product-content">
+                            <h3 data-i18n="relatedProduct1">Smartwatch X100</h3>
+                            <p class="product-seller" data-i18n="by">by</p>
+                            <p class="product-price">$89.99 <span class="original-price">$109.99</span></p>
+                            <div class="product-actions">
+                                <button class="btn btn-icon" aria-label="Add to cart"><i class="fas fa-cart-plus"></i></button>
+                                <button class="btn btn-text" data-i18n="view">View</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product Card 2 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&w=1364&q=80" 
+                                 alt="Wireless Earbuds Pro" loading="lazy">
+                        </div>
+                        <div class="product-content">
+                            <h3 data-i18n="relatedProduct2">Wireless Earbuds Pro</h3>
+                            <p class="product-seller" data-i18n="by">by</p>
+                            <p class="product-price">$59.99</p>
+                            <div class="product-actions">
+                                <button class="btn btn-icon" aria-label="Add to cart"><i class="fas fa-cart-plus"></i></button>
+                                <button class="btn btn-text" data-i18n="view">View</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product Card 3 -->
+                    <div class="product-card">
+                        <div class="product-badge">🔥 <span data-i18n="trending">Trending</span></div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1547721064-da6cfb341d50?auto=format&fit=crop&w=1364&q=80" 
+                                 alt="Fitness Tracker Band" loading="lazy">
+                        </div>
+                        <div class="product-content">
+                            <h3 data-i18n="relatedProduct3">Fitness Tracker Band</h3>
+                            <p class="product-seller" data-i18n="by">by</p>
+                            <p class="product-price">$39.99</p>
+                            <div class="product-actions">
+                                <button class="btn btn-icon" aria-label="Add to cart"><i class="fas fa-cart-plus"></i></button>
+                                <button class="btn btn-text" data-i18n="view">View</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product Card 4 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=1364&q=80" 
+                                 alt="Bluetooth Speaker" loading="lazy">
+                        </div>
+                        <div class="product-content">
+                            <h3 data-i18n="relatedProduct4">Bluetooth Speaker</h3>
+                            <p class="product-seller" data-i18n="by">by</p>
+                            <p class="product-price">$45.99</p>
+                            <div class="product-actions">
+                                <button class="btn btn-icon" aria-label="Add to cart"><i class="fas fa-cart-plus"></i></button>
+                                <button class="btn btn-text" data-i18n="view">View</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <img src="assets/images/logo.png" alt="Aly Dibo Logo" class="footer-logo">
+                    <p data-i18n="footerAbout">Aly Dibo connects wholesale buyers with trusted suppliers across multiple industries and regions.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3 data-i18n="footerLinks1">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html" data-i18n="home">Home</a></li>
+                        <li><a href="index.html#why" data-i18n="why">Why Aly Dibo?</a></li>
+                        <li><a href="index.html#categories" data-i18n="categories">Categories</a></li>
+                        <li><a href="index.html#products" data-i18n="products">Products</a></li>
+                        <li><a href="index.html#sell" data-i18n="sell">Sell With Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 data-i18n="footerLinks2">Company</h3>
+                    <ul>
+                        <li><a href="#" data-i18n="about">About Us</a></li>
+                        <li><a href="#" data-i18n="careers">Careers</a></li>
+                        <li><a href="#" data-i18n="blog">Blog</a></li>
+                        <li><a href="#" data-i18n="contact">Contact</a></li>
+                        <li><a href="#" data-i18n="faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 data-i18n="footerContact">Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footerAddress">123 Business District, Dubai, UAE</span></li>
+                        <li><i class="fas fa-phone"></i> <span>+971 4 123 4567</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>info@alydibo.com</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="utility-buttons">
+                    <button id="footer-theme-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <div class="divider"></div>
+                    <div class="language-switcher">
+                        <i class="fas fa-globe"></i>
+                        <button class="lang-btn active" data-lang="en">EN</button>
+                        <button class="lang-btn" data-lang="ar">AR</button>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; <span id="year"></span> Aly Dibo. <span data-i18n="rights">All rights reserved.</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script  defer src="assets/js/product-details.js"></script>
+    <script  defer src="assets/js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100,
+        });
+    </script>
+</body>
+</html>

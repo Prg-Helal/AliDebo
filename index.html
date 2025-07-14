@@ -13,13 +13,13 @@
     <link rel="alternate" hreflang="ar" href="https://alydibo.com/ar">
     <link rel="canonical" href="https://alydibo.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preload"
         href="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
         as="image">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&display=swap" rel="stylesheet">
 
-    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
 
 </head>
 
@@ -28,22 +28,53 @@
     <div class="top-bar">
         <div class="container">
             <div class="top-bar-content">
+
                 <div class="utility-buttons">
                     <button id="theme-toggle" aria-label="Toggle dark mode">
                         <i class="fas fa-moon"></i>
                     </button>
+
+                    <div class="divider"></div>
+
                     <div class="language-switcher">
+                        <i class="fas fa-globe"></i>
                         <button class="lang-btn active" data-lang="en">EN</button>
                         <button class="lang-btn" data-lang="ar">AR</button>
                     </div>
                 </div>
+
                 <div class="social-links">
                     <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                     <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
+
             </div>
+        </div>
+    </div>
+
+    <!-- sidebar overlay -->
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <div class="mobile-sidebar" id="mobileSidebar">
+        <button class="close-sidebar" id="closeSidebar" aria-label="Close Sidebar">&times;</button>
+        <div class="sidebar-logo">
+            <img src="assets/images/logo.png" alt="Logo" />
+            <h1 class="logo-text" data-i18n="logoText">علي ديبو</h1>
+        </div>
+        <div class="sidebar-links">
+            <a href="#home" class="nav-link" data-i18n="home">Home</a>
+            <a href="#why" class="nav-link" data-i18n="why">Why Aly Dibo?</a>
+            <a href="#categories" class="nav-link" data-i18n="categories">Categories</a>
+            <a href="#stories" class="nav-link" data-i18n="stories">Success Stories</a>
+            <a href="#products" class="nav-link" data-i18n="products">Products</a>
+            <a href="#sell" class="nav-link" data-i18n="sell">Sell With Us</a>
+        </div>
+        <div class="sidebar-auth">
+            <button class="btn btn-outline" data-i18n="login">Login</button>
+            <button class="btn btn-primary" data-i18n="register">Register</button>
         </div>
     </div>
 
@@ -52,7 +83,7 @@
         <div class="container">
             <nav class="navbar">
                 <a href="#" class="logo" data-aos="fade-right" data-aos-delay="100">
-                    <img src="logo.png" alt="Aly Dibo Logo" width="150" height="40" />
+                    <img src="assets/images/logo.png" alt="Aly Dibo Logo" width="150" height="40" />
                     <h1 class="logo-text" data-i18n="logoText">علي ديبو</h1>
                 </a>
 
@@ -70,33 +101,25 @@
                     <button class="btn btn-primary" data-i18n="register">Register</button>
                 </div>
 
-                <button class="hamburger" id="hamburger" aria-label="Menu" data-aos="fade-left" data-aos-delay="400">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+                <!-- container -->
 
-                <div class="sidebar-overlay" id="sidebarOverlay"></div>
+                <div class="sidebar-container">
 
-                <div class="mobile-sidebar" id="mobileSidebar">
-                    <button class="close-sidebar" id="closeSidebar" aria-label="Close Sidebar">&times;</button>
-                    <div class="sidebar-logo">
-                        <img src="logo.png" alt="Logo" />
-                        <h1 class="logo-text" data-i18n="logoText">علي ديبو</h1>
+                    <!-- sidebar cart -->
+                    <div class="sidebar-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
                     </div>
-                    <div class="sidebar-links">
-                        <a href="#home" class="nav-link" data-i18n="home">Home</a>
-                        <a href="#why" class="nav-link" data-i18n="why">Why Aly Dibo?</a>
-                        <a href="#categories" class="nav-link" data-i18n="categories">Categories</a>
-                        <a href="#stories" class="nav-link" data-i18n="stories">Success Stories</a>
-                        <a href="#products" class="nav-link" data-i18n="products">Products</a>
-                        <a href="#sell" class="nav-link" data-i18n="sell">Sell With Us</a>
-                    </div>
-                    <div class="sidebar-auth">
-                        <button class="btn btn-outline" data-i18n="login">Login</button>
-                        <button class="btn btn-primary" data-i18n="register">Register</button>
-                    </div>
+
+                    <!-- hamburger -->
+                    <button class="hamburger" id="hamburger" aria-label="Menu" data-aos="fade-left"
+                        data-aos-delay="400">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                 </div>
+
             </nav>
         </div>
     </header>
@@ -106,6 +129,13 @@
         <i class="fas fa-shopping-cart"></i>
         <span class="cart-count">0</span>
     </div>
+
+
+    <!-- floating btn -->
+    <!-- Floating CTA Button for Mobile -->
+    <a href="#sell" class="mobile-cta-button" id="mobileCtaButton" data-i18n="register">
+        Add Company
+    </a>
 
     <!-- Hero Section -->
     <section class="hero-section section-padding" id="home">
@@ -508,39 +538,42 @@
             </div>
 
             <div class="section-footer" data-aos="fade-up" data-aos-delay="400">
-                <button class="btn btn-outline" data-i18n="viewAll">View All Products</button>
+                <button class="btn btn-outline" data-i18n="viewAll" onclick="window.location.href = 'products.html'"">View All Products</button>
             </div>
         </div>
     </section>
 
     <!-- Sell With Us Section -->
-    <section class="sell-section section-padding" id="sell">
-        <div class="container">
-            <div class="sell-content">
-                <h2 data-i18n="sellTitle">Start Selling on Aly Dibo Today</h2>
-                <p data-i18n="sellText">Join thousands of suppliers reaching new customers and growing their wholesale
-                    business. Our platform provides the tools, visibility, and security you need to succeed.</p>
-                <div class="sell-features">
-                    <div class="feature-item">
-                        <i class="fas fa-chart-line"></i>
-                        <span data-i18n="sellFeature1">Grow your sales</span>
+    <section class=" sell-section section-padding" id="sell">
+                    <div class="container">
+                        <div class="sell-content">
+                            <h2 data-i18n="sellTitle">Start Selling on Aly Dibo Today</h2>
+                            <p data-i18n="sellText">Join thousands of suppliers reaching new customers and growing their
+                                wholesale
+                                business. Our platform provides the tools, visibility, and security you need to succeed.
+                            </p>
+                            <div class="sell-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span data-i18n="sellFeature1">Grow your sales</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-users"></i>
+                                    <span data-i18n="sellFeature2">Reach new buyers</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-lock"></i>
+                                    <span data-i18n="sellFeature3">Secure transactions</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary btn-large" data-i18n="registerCompany">Register Your
+                                Company</button>
+                        </div>
+                        <div class="sell-image">
+                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                                alt="Business growth illustration" loading="lazy">
+                        </div>
                     </div>
-                    <div class="feature-item">
-                        <i class="fas fa-users"></i>
-                        <span data-i18n="sellFeature2">Reach new buyers</span>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-lock"></i>
-                        <span data-i18n="sellFeature3">Secure transactions</span>
-                    </div>
-                </div>
-                <button class="btn btn-primary btn-large" data-i18n="registerCompany">Register Your Company</button>
-            </div>
-            <div class="sell-image">
-                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                    alt="Business growth illustration" loading="lazy">
-            </div>
-        </div>
     </section>
 
     <!-- Newsletter Section -->
@@ -569,8 +602,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col footer-about">
-                    <img src="https://via.placeholder.com/150x40?text=Aly+Dibo+Logo" alt="Aly Dibo Logo"
-                        class="footer-logo">
+                    <img src="assets/images/logo.png" alt="Aly Dibo Logo" class="footer-logo">
                     <p data-i18n="footerAbout">Aly Dibo connects wholesale buyers with trusted suppliers across multiple
                         industries and regions.</p>
                     <div class="footer-social">
@@ -611,15 +643,20 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <div class="footer-utility">
+                <div class="utility-buttons">
+                    <button id="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+
+                    <div class="divider"></div>
+
                     <div class="language-switcher">
+                        <i class="fas fa-globe"></i>
                         <button class="lang-btn active" data-lang="en">EN</button>
                         <button class="lang-btn" data-lang="ar">AR</button>
                     </div>
-                    <button id="footer-theme-toggle" aria-label="Toggle dark mode">
-                        <i class="fas fa-moon"></i>
-                    </button>
                 </div>
+
                 <div class="footer-copyright">
                     <p>&copy; <span id="year"></span> Aly Dibo. <span data-i18n="rights">All rights reserved.</span></p>
                 </div>
@@ -627,7 +664,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init({

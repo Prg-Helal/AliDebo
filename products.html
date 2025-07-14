@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Ali Dibo | Wholesale Marketplace</title>
+    <meta name="description"
+        content="Browse our extensive catalog of wholesale products across multiple categories on Ali Dibo marketplace.">
+
+    <!-- SEO Meta Tags -->
+    <link rel="alternate" hreflang="en" href="https://alydibo.com/en/products">
+    <link rel="alternate" hreflang="ar" href="https://alydibo.com/ar/products">
+    <link rel="canonical" href="https://alydibo.com/products">
+
+    <!-- CSS & Fonts -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/products.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Top Bar (Same as index.html) -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="utility-buttons">
+                    <button id="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <div class="divider"></div>
+                    <div class="language-switcher">
+                        <i class="fas fa-globe"></i>
+                        <button class="lang-btn active" data-lang="en">EN</button>
+                        <button class="lang-btn" data-lang="ar">AR</button>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header (Same as index.html) -->
+    <header class="main-header" data-aos="fade-down" data-aos-duration="600">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo" data-aos="fade-right" data-aos-delay="100">
+                    <img src="assets/images/logo.png" alt="Aly Dibo Logo" width="150" height="40" />
+                    <h1 class="logo-text" data-i18n="logoText">علي ديبو</h1>
+                </a>
+
+                <div class="nav-links active" id="nav-links" data-aos="fade-down" data-aos-delay="200">
+                    <a href="index.html" class="nav-link" data-i18n="home">Home</a>
+                    <a href="index.html#why" class="nav-link" data-i18n="why">Why Aly Dibo?</a>
+                    <a href="index.html#categories" class="nav-link" data-i18n="categories">Categories</a>
+                    <a href="index.html#stories" class="nav-link" data-i18n="stories">Success Stories</a>
+                    <a href="products.html" class="nav-link active" data-i18n="products">Products</a>
+                    <a href="index.html#sell" class="nav-link" data-i18n="sell">Sell With Us</a>
+                </div>
+
+                <div class="auth-buttons" data-aos="fade-left" data-aos-delay="300">
+                    <button class="btn btn-outline" data-i18n="login">Login</button>
+                    <button class="btn btn-primary" data-i18n="register">Register</button>
+                </div>
+
+                <button class="hamburger" id="hamburger" aria-label="Menu" data-aos="fade-left" data-aos-delay="400">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+                <div class="mobile-sidebar" id="mobileSidebar">
+                    <button class="close-sidebar" id="closeSidebar" aria-label="Close Sidebar">&times;</button>
+                    <div class="sidebar-logo">
+                        <img src="assets/images/logo.png" alt="Logo" />
+                        <h1 class="logo-text" data-i18n="logoText">علي ديبو</h1>
+                    </div>
+                    <div class="sidebar-links">
+                        <a href="index.html" class="nav-link" data-i18n="home">Home</a>
+                        <a href="index.html#why" class="nav-link" data-i18n="why">Why Aly Dibo?</a>
+                        <a href="index.html#categories" class="nav-link" data-i18n="categories">Categories</a>
+                        <a href="index.html#stories" class="nav-link" data-i18n="stories">Success Stories</a>
+                        <a href="products.html" class="nav-link active" data-i18n="products">Products</a>
+                        <a href="index.html#sell" class="nav-link" data-i18n="sell">Sell With Us</a>
+                    </div>
+                    <div class="sidebar-auth">
+                        <button class="btn btn-outline" data-i18n="login">Login</button>
+                        <button class="btn btn-primary" data-i18n="register">Register</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Floating Cart -->
+    <div class="floating-cart" id="floating-cart">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count">0</span>
+    </div>
+
+    <!-- Main Content -->
+    <main class="products-page">
+        <!-- Page Header Section -->
+        <section class="page-header section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h1 data-i18n="productsPageTitle" data-aos="fade-up">Our Products Catalog</h1>
+                    <p class="section-subtitle" data-i18n="productsPageSubtitle" data-aos="fade-up"
+                        data-aos-delay="150">
+                        Discover quality wholesale products from verified suppliers
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filter Bar Section -->
+        <section class="filter-section">
+            <div class="container">
+                <div class="filter-bar" data-aos="fade-up">
+                    <div class="filter-group">
+                        <label for="category-filter" data-i18n="filterCategory">Category</label>
+                        <select id="category-filter" class="filter-select">
+                            <option value="all" data-i18n="allCategories">All Categories</option>
+                            <option value="electronics" data-i18n="category1">Electronics</option>
+                            <option value="textiles" data-i18n="category2">Textiles & Apparel</option>
+                            <option value="food" data-i18n="category3">Food & Beverage</option>
+                            <option value="furniture" data-i18n="category4">Furniture</option>
+                            <option value="beauty" data-i18n="category5">Beauty & Personal Care</option>
+                            <option value="industrial" data-i18n="category6">Industrial Supplies</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label data-i18n="filterPrice">Price Range</label>
+                        <div class="price-range">
+                            <input type="number" id="min-price" placeholder="Min" data-i18n-placeholder="min">
+                            <span>-</span>
+                            <input type="number" id="max-price" placeholder="Max" data-i18n-placeholder="max">
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="sort-by" data-i18n="filterSort">Sort By</label>
+                        <select id="sort-by" class="filter-select">
+                            <option value="popular" data-i18n="sortPopular">Most Popular</option>
+                            <option value="newest" data-i18n="sortNewest">Newest First</option>
+                            <option value="price-low" data-i18n="sortPriceLow">Price: Low to High</option>
+                            <option value="price-high" data-i18n="sortPriceHigh">Price: High to Low</option>
+                            <option value="rating" data-i18n="sortRating">Highest Rated</option>
+                        </select>
+                    </div>
+
+                    <button class="btn btn-outline" id="reset-filters" data-i18n="resetFilters">Reset Filters</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Grid Section -->
+        <section class="products-grid-section section-padding">
+            <div class="container">
+                <div class="products-grid">
+                    <!-- Product Card 1 -->
+                    <article class="product-card" data-aos="fade-up" data-aos-delay="100" data-category="electronics">
+                        <div class="product-badge" data-i18n="new">New</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=1364&q=80"
+                                alt="Smartwatch X200 Pro" loading="lazy">
+                        </div>
+                        <div class="product-content">
+                            <h3 data-i18n="product1">Smartwatch X200 Pro</h3>
+                            <p class="product-description" data-i18n="product1Desc">
+                                Advanced smartwatch with health monitoring and GPS
+                            </p>
+                            <div class="product-price">
+                                <span class="current-price">$89.99</span>
+                                <span class="original-price">$129.99</span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="rating-count">(42)</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-primary btn-sm add-to-cart" data-i18n="addToCart">Add to
+                                    Cart</button>
+                                <a href="product-details.html" class="btn btn-outline btn-sm"
+                                    data-i18n="viewDetails">Details</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product Card 2 -->
+                    <article class="product-card" data-aos="fade-up" data-aos-delay="150" data-category="textiles">
+                        <div class="product-badge" data-i18n="trending">Trending</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?auto=format&fit=crop&w=1559&q=80"
+                                alt="Organic Cotton T-shirts" loading="lazy">
+                        </div>
+                        <div class="product-content">
+                            <h3 data-i18n="product2">Organic Cotton T-shirts</h3>
+                            <p class="product-description" data-i18n="product2Desc">
+                                Eco-friendly premium quality cotton t-shirts
+                            </p>
+                            <div class="product-price">
+                                <span class="current-price">$3.20</span>
+                                <span data-i18n="unit">/unit</span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="rating-count">(128)</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-primary btn-sm add-to-cart" data-i18n="addToCart">Add to
+                                    Cart</button>
+                                <a href="product-details.html" class="btn btn-outline btn-sm"
+                                    data-i18n="viewDetails">Details</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product Card 3 -->
+                    <article class="product-card" data-aos="fade-up" data-aos-delay="200" data-category="food">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=1374&q=80"
+                                alt="Premium Arabica Coffee" loading="lazy">
+                        </div>
+                        <div class="product-content">
+                            <h3 data-i18n="product3">Premium Arabica Coffee</h3>
+                            <p class="product-description" data-i18n="product3Desc">
+                                100% Arabica beans, medium roast, 1kg packages
+                            </p>
+                            <div class="product-price">
+                                <span class="current-price">$8.75</span>
+                                <span data-i18n="unit">/unit</span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="rating-count">(256)</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-primary btn-sm add-to-cart" data-i18n="addToCart">Add to
+                                    Cart</button>
+                                <a href="product-details.html" class="btn btn-outline btn-sm"
+                                    data-i18n="viewDetails">Details</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product Card 4 -->
+                    <article class="product-card" data-aos="fade-up" data-aos-delay="250" data-category="furniture">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=1434&q=80"
+                                alt="Ergonomic Office Chair" loading="lazy">
+                        </div>
+                        <div class="product-content">
+                            <h3 data-i18n="product4">Ergonomic Office Chair</h3>
+                            <p class="product-description" data-i18n="product4Desc">
+                                Adjustable lumbar support and headrest
+                            </p>
+                            <div class="product-price">
+                                <span class="current-price">$129.99</span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="rating-count">(87)</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-primary btn-sm add-to-cart" data-i18n="addToCart">Add to
+                                    Cart</button>
+                                <a href="product-details.html" class="btn btn-outline btn-sm"
+                                    data-i18n="viewDetails">Details</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product Card 5 -->
+                    <article class="product-card" data-aos="fade-up" data-aos-delay="300" data-category="beauty">
+                        <div class="product-badge" data-i18n="popular">Popular</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=1374&q=80"
+                                alt="Natural Skincare Set" loading="lazy">
+                        </div>
+                        <div class="product-content">
+                            <h3 data-i18n="product5">Natural Skincare Set</h3>
+                            <p class="product-description" data-i18n="product5Desc">
+                                Organic ingredients, 5-piece skincare bundle
+                            </p>
+                            <div class="product-price">
+                                <span class="current-price">$12.90</span>
+                                <span data-i18n="unit">/unit</span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="rating-count">(312)</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-primary btn-sm add-to-cart" data-i18n="addToCart">Add to
+                                    Cart</button>
+                                <a href="product-details.html" class="btn btn-outline btn-sm"
+                                    data-i18n="viewDetails">Details</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product Card 6 -->
+                    <article class="product-card" data-aos="fade-up" data-aos-delay="350" data-category="industrial">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=1470&q=80"
+                                alt="Professional Tool Kit" loading="lazy">
+                        </div>
+                        <div class="product-content">
+                            <h3 data-i18n="product6">Professional Tool Kit</h3>
+                            <p class="product-description" data-i18n="product6Desc">
+                                32-piece professional grade tool set
+                            </p>
+                            <div class="product-price">
+                                <span class="current-price">$45.00</span>
+                                <span data-i18n="unit">/unit</span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="rating-count">(176)</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-primary btn-sm add-to-cart" data-i18n="addToCart">Add to
+                                    Cart</button>
+                                <a href="product-details.html" class="btn btn-outline btn-sm"
+                                    data-i18n="viewDetails">Details</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product Card 7 -->
+                    <article class="product-card" data-aos="fade-up" data-aos-delay="400" data-category="electronics">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1470&q=80"
+                                alt="Wireless Headphones" loading="lazy">
+                        </div>
+                        <div class="product-content">
+                            <h3 data-i18n="product7">Wireless Headphones</h3>
+                            <p class="product-description" data-i18n="product7Desc">
+                                Noise-cancelling Bluetooth headphones
+                            </p>
+                            <div class="product-price">
+                                <span class="current-price">$59.99</span>
+                                <span class="original-price">$79.99</span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="rating-count">(204)</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-primary btn-sm add-to-cart" data-i18n="addToCart">Add to
+                                    Cart</button>
+                                <a href="product-details.html" class="btn btn-outline btn-sm"
+                                    data-i18n="viewDetails">Details</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product Card 8 -->
+                    <article class="product-card" data-aos="fade-up" data-aos-delay="450" data-category="textiles">
+                        <div class="product-badge" data-i18n="new">New</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=687&q=80"
+                                alt="Luxury Bath Towels" loading="lazy">
+                        </div>
+                        <div class="product-content">
+                            <h3 data-i18n="product8">Luxury Bath Towels</h3>
+                            <p class="product-description" data-i18n="product8Desc">
+                                600 GSM premium cotton bath towels
+                            </p>
+                            <div class="product-price">
+                                <span class="current-price">$7.50</span>
+                                <span data-i18n="unit">/unit</span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                                <span class="rating-count">(53)</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-primary btn-sm add-to-cart" data-i18n="addToCart">Add to
+                                    Cart</button>
+                                <a href="product-details.html" class="btn btn-outline btn-sm"
+                                    data-i18n="viewDetails">Details</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination" data-aos="fade-up">
+                    <button class="btn btn-outline" disabled data-i18n="prev">Previous</button>
+                    <div class="page-numbers">
+                        <button class="btn btn-outline active">1</button>
+                        <button class="btn btn-outline">2</button>
+                        <button class="btn btn-outline">3</button>
+                        <span>...</span>
+                        <button class="btn btn-outline">8</button>
+                    </div>
+                    <button class="btn btn-outline" data-i18n="next">Next</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <img src="https://via.placeholder.com/150x40?text=Aly+Dibo+Logo" alt="Aly Dibo Logo"
+                        class="footer-logo">
+                    <p data-i18n="footerAbout">Aly Dibo connects wholesale buyers with trusted suppliers across multiple
+                        industries and regions.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3 data-i18n="footerLinks1">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html" data-i18n="home">Home</a></li>
+                        <li><a href="index.html#why" data-i18n="why">Why Aly Dibo?</a></li>
+                        <li><a href="index.html#categories" data-i18n="categories">Categories</a></li>
+                        <li><a href="products.html" data-i18n="products">Products</a></li>
+                        <li><a href="index.html#sell" data-i18n="sell">Sell With Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 data-i18n="footerLinks2">Company</h3>
+                    <ul>
+                        <li><a href="#" data-i18n="about">About Us</a></li>
+                        <li><a href="#" data-i18n="careers">Careers</a></li>
+                        <li><a href="#" data-i18n="blog">Blog</a></li>
+                        <li><a href="#" data-i18n="contact">Contact</a></li>
+                        <li><a href="#" data-i18n="faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 data-i18n="footerContact">Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footerAddress">123 Business District,
+                                Dubai, UAE</span></li>
+                        <li><i class="fas fa-phone"></i> <span>+971 4 123 4567</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>info@alydibo.com</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="utility-buttons">
+                    <button id="footer-theme-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <div class="divider"></div>
+                    <div class="language-switcher">
+                        <i class="fas fa-globe"></i>
+                        <button class="lang-btn active" data-lang="en">EN</button>
+                        <button class="lang-btn" data-lang="ar">AR</button>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; <span id="year"></span> Aly Dibo. <span data-i18n="rights">All rights reserved.</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/products.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
