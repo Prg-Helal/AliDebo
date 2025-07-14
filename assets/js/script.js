@@ -41,6 +41,9 @@ const translations = {
         sellerGuide: "Seller Guide",
         heroTitle3: "Bulk Purchasing Made Simple",
         heroText3: "Get the best deals when you buy in volume. Our platform makes wholesale purchasing efficient and transparent.",
+        sliderText1: "Explore Markets",
+        sliderText2: "Expand Your Reach",
+        sliderText3: "Trusted Companies",
         exploreDeals: "Explore Deals",
         requestQuote: "Request Quote",
         whyTitle: "Why Choose Aly Dibo?",
@@ -130,6 +133,9 @@ const translations = {
 `,
         hero_subtitle: `علي ديبو هو الجسر بين الشركات الموثوقة والعملاء الحقيقيين. اكتشف منتجات أصلية ونمِّ عملك بثقة.`,
         hero_cta_shop: `ابدأ التسوق`,
+        sliderText1: "اكتشف الأسواق",
+        sliderText2: "وسع انتشارك",
+        sliderText3: "شركات موثوقة",
         hero_cta_sell: `ابدأ البيع`,
         browseNow: "تصفح الآن",
         learnMore: "تعلم المزيد",
@@ -215,7 +221,6 @@ const translations = {
         rights: "جميع الحقوق محفوظة."
     }
 };
-
 // Current language
 let currentLang = 'en';
 
@@ -265,6 +270,24 @@ function setLanguage(lang) {
             }
         }
     });
+}
+
+
+let slideIndex = 0;
+const heroSlides = document.querySelectorAll('#heroSliderMobile .slide');
+
+function showSlides() {
+    heroSlides.forEach((slide, i) => {
+        slide.classList.remove('active');
+    });
+    slideIndex = (slideIndex + 1) % heroSlides.length;
+    heroSlides[slideIndex].classList.add('active');
+}
+
+// أول Slide
+if (slides.length > 0) {
+    slides[0].classList.add('active');
+    setInterval(showSlides, 3000); // كل 3 ثواني
 }
 
 // Hero Slider
@@ -454,11 +477,6 @@ function init() {
     const savedLang = localStorage.getItem('language') ||
         (navigator.language.startsWith('ar') ? 'ar' : 'en');
     setLanguage(savedLang);
-
-    // Initialize slider
-    createDots();
-    showSlide(0);
-    startSlideInterval();
 
     // Set current year in footer
     document.getElementById('year').textContent = new Date().getFullYear();

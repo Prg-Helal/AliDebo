@@ -79,15 +79,15 @@
     </div>
 
     <!-- Main Header -->
-    <header class="main-header" data-aos="fade-down" data-aos-duration="600">
+    <header class="main-header" >
         <div class="container">
             <nav class="navbar">
-                <a href="#" class="logo" data-aos="fade-right" data-aos-delay="100">
+                <a href="#" class="logo">
                     <img src="assets/images/logo.png" alt="Aly Dibo Logo" width="150" height="40" />
                     <h1 class="logo-text" data-i18n="logoText">علي ديبو</h1>
                 </a>
 
-                <div class="nav-links active" id="nav-links" data-aos="fade-down" data-aos-delay="200">
+                <div class="nav-links active" id="nav-links" >
                     <a href="#home" class="nav-link" data-i18n="home">Home</a>
                     <a href="#why" class="nav-link" data-i18n="why">Why Aly Dibo?</a>
                     <a href="#categories" class="nav-link" data-i18n="categories">Categories</a>
@@ -96,7 +96,7 @@
                     <a href="#sell" class="nav-link" data-i18n="sell">Sell With Us</a>
                 </div>
 
-                <div class="auth-buttons" data-aos="fade-left" data-aos-delay="300">
+                <div class="auth-buttons">
                     <button class="btn btn-outline" data-i18n="login">Login</button>
                     <button class="btn btn-primary" data-i18n="register">Register</button>
                 </div>
@@ -131,7 +131,6 @@
     </div>
 
 
-    <!-- floating btn -->
     <!-- Floating CTA Button for Mobile -->
     <a href="#sell" class="mobile-cta-button" id="mobileCtaButton" data-i18n="register">
         Add Company
@@ -141,6 +140,7 @@
     <section class="hero-section section-padding" id="home">
         <div class="container">
             <div class="hero-grid">
+
                 <!-- Text Area -->
                 <div class="hero-text" data-aos="fade-up" data-aos-delay="100">
                     <h1 data-i18n="heroTitle">
@@ -158,20 +158,40 @@
                     </div>
                 </div>
 
-                <!-- Image Grid -->
-                <div class="hero-images">
+                <!-- Grid Images – Desktop only -->
+                <div class="hero-images desktop-only">
                     <div class="hero-img-card hero-img-1" data-aos="zoom-in" data-aos-delay="200">
-                        <img src="assets/images/E-Commerce platforms.jpeg" alt="Buyer Image" loading="lazy" />
+                        <img src="assets/images/Expand Your Reach.jpeg" alt="Buyer Image" loading="lazy" />
                     </div>
                     <div class="hero-img-card hero-img-2" data-aos="zoom-in" data-aos-delay="300">
-                        <img src="assets/images/One month of social media marketing management for your small business.jpeg"
+                        <img src="assets/images/Explore Your Rich.jpeg"
                             alt="Global Reach" loading="lazy" />
                     </div>
                     <div class="hero-img-card hero-img-3" data-aos="zoom-in" data-aos-delay="400">
-                        <img src="assets/images/Servicio de entrega Caja de paquetes de envío de camiones de entrega con alfileres en el mapa _ PSD Premium.jpeg"
+                        <img src="assets/images/Trusted Companies.jpeg"
                             alt="Company Collaboration" loading="lazy" />
                     </div>
                 </div>
+
+                <!-- Slider – Mobile only -->
+                <div class="hero-slider mobile-only" id="heroSliderMobile">
+                    <div class="slide">
+                        <img src="assets/images/Explore Your Rich.jpeg" alt="Slide 1" />
+                        <div class="slide-overlay" data-i18n="sliderText1">اكتشف الأسواق</div>
+                    </div>
+                    <div class="slide">
+                        <img src="assets/images/Expand Your Reach.jpeg"
+                            alt="Slide 2" />
+                        <div class="slide-overlay" data-i18n="sliderText2">وسع انتشارك</div>
+                    </div>
+                    <div class="slide">
+                        <img src="assets/images/Trusted Companies.jpeg"
+                            alt="Slide 3" />
+
+                        <div class="slide-overlay" data-i18n="sliderText3">شركات موثوقة</div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -669,8 +689,8 @@
     <script>
         AOS.init({
             duration: 1000,
-            once: true, // علشان يظهر مرة واحدة
-            offset: 1, // قلل الـ offset علشان يشتغل بدري
+            once: false,
+            offset: 1,
         });
 
         window.addEventListener('load', () => {
