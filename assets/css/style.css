@@ -489,6 +489,10 @@ button {
     visibility: visible;
 }
 
+.mobile-cta-button{
+    display: none;
+}
+
 .mobile-sidebar {
     position: fixed;
     top: 0;
